@@ -30,14 +30,27 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="HolaWaa...! Soy Gabriel...👋🏻"
-					tagline="🎓Liceniado en Sistemas💻Desarrollador .NET con experiencia en ASP.NET WebForms y SQL Server"
+					title="Holaaa...! Sopy Gabriel...👋🏻"
+					tagline="🎓Licenciado en Sistemas💻Desarrollador .NET con experiencia en ASP.NET WebForms y SQL Server"
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<!-- Suponiendo que <Pill> es un componente personalizado que puedes modificar -->
+							<a href="https://github.com/ggonzalez1985/" target="_blank" rel="noopener noreferrer">
+								<Pill>
+								  <Icon icon="code" size="1.33em" /> Github
+								</Pill>
+							</a>											
+							<a href="https://www.linkedin.com/in/ggonzalez1985" target="_blank" rel="noopener noreferrer">
+								<Pill>
+									<Icon icon="LinkedIn" size="1.33em" /> LinkedIn
+								</Pill>
+							</a>
+							<a href="mailto:gabrielgonzalez1985@gmail.com" id="contactPill">
+								<Pill>
+									<Icon icon="Contacto" size="1.33em" /> Contacto
+								</Pill>
+							</a>
 					</div>
 				</Hero>
 
@@ -250,3 +263,31 @@ const projects = (await getCollection('work'))
 		}
 	}
 </style>
+
+<script>
+	document.getElementById('contactPill').addEventListener('click', function(event) {
+		event.preventDefault(); // Evita que se abra el cliente de correo electrónico
+	
+		// Dirección de correo electrónico que deseas copiar
+		const email = 'gabrielgonzalez1985@gmail.com';
+	
+		// Crear un elemento de texto temporal para copiar el correo electrónico
+		const textArea = document.createElement('textarea');
+		textArea.value = email;
+		document.body.appendChild(textArea);
+	
+		// Seleccionar el contenido del área de texto
+		textArea.select();
+		textArea.setSelectionRange(0, 99999); // Para móviles
+	
+		// Copiar el contenido al portapapeles
+		document.execCommand('copy');
+	
+		// Eliminar el área de texto temporal
+		document.body.removeChild(textArea);
+	
+		// Opcional: Notificar al usuario que el correo se ha copiado
+		alert('Correo electrónico copiado al portapapeles!');
+	});
+	</script>
+	
