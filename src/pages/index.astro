@@ -31,17 +31,17 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Holaaa...! Soy Gabriel...👋🏻"
-					tagline="🎓Licenciado en Sistemas💻Desarrollador .NET con experiencia en ASP.NET WebForms y SQL Server"
+					tagline="🎓Licenciado en Sistemas de Información💻Desarrollador .NET con experiencia en ASP.NET WebForms y SQL Server"
 					align="start"
 				>
 					<div class="roles">
 						<!-- Suponiendo que <Pill> es un componente personalizado que puedes modificar -->
-							<a href="https://github.com/ggonzalez1985/" target="_blank" rel="noopener noreferrer">
+							<a href="https://github.com/ggonzalez1985/" target="_blank" rel="noopener noreferrer" id="GitHubPill">
 								<Pill>
 								  <Icon icon="code" size="1.33em" /> Github
 								</Pill>
 							</a>											
-							<a href="https://www.linkedin.com/in/ggonzalez1985" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.linkedin.com/in/ggonzalez1985" target="_blank" rel="noopener noreferrer" id="LinkedInPill">
 								<Pill>
 									<Icon icon="LinkedIn" size="1.33em" /> LinkedIn
 								</Pill>
@@ -73,8 +73,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Proyectos</h3>
+					<p>A continuación, puedes ver una selección de mis proyectos desarrollados hasta ahora.</p>
 				</header>
 
 				<div class="gallery">
@@ -91,7 +91,7 @@ const projects = (await getCollection('work'))
 
 				<div class="cta">
 					<CallToAction href="/work/">
-						View All
+						Ver Todos
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
@@ -296,3 +296,135 @@ const projects = (await getCollection('work'))
 	});
 	</script>
 	
+	<style>	
+		#downloadPill {
+			text-decoration: none;
+			color: #007bff;
+			padding: 10px 2px;
+			border-radius: 5px;
+			display: inline-block;
+			position: relative;
+			transition: color 0.3s ease;
+		}
+
+		#downloadPill::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			background-color: #007bff;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: width 0.3s ease;
+		}
+
+		#downloadPill:hover {
+			color: #0056b3;
+		}
+
+		#downloadPill:hover::after {
+			width: 80%;
+		}
+
+	</style>
+
+
+<style>	
+	#contactPill {
+		text-decoration: none;
+		color: #007bff;
+		padding: 10px 2px;
+		border-radius: 5px;
+		display: inline-block;
+		position: relative;
+		transition: color 0.3s ease;
+	}
+
+	#contactPill::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		background-color: #007bff;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: width 0.3s ease;
+	}
+
+	#contactPill:hover {
+		color: #0056b3;
+	}
+
+	#contactPill:hover::after {
+		width: 80%;
+	}
+
+</style>
+	
+<style>	
+	#LinkedInPill {
+		text-decoration: none;
+		color: #007bff;
+		padding: 10px 2px;
+		border-radius: 5px;
+		display: inline-block;
+		position: relative;
+		transition: color 0.3s ease;
+	}
+
+	#LinkedInPill::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		background-color: #007bff;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: width 0.3s ease;
+	}
+
+	#LinkedInPill:hover {
+		color: #0056b3;
+	}
+
+	#LinkedInPill:hover::after {
+		width: 80%;
+	}
+
+</style>
+
+<style>	
+	#GitHubPill {
+		text-decoration: none;
+		color: #007bff;
+		padding: 10px 2px;
+		border-radius: 5px;
+		display: inline-block;
+		position: relative;
+		transition: color 0.3s ease;
+	}
+
+	#GitHubPill::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		background-color: #007bff;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: width 0.3s ease;
+	}
+
+	#GitHubPill:hover {
+		color: #0056b3;
+	}
+
+	#GitHubPill:hover::after {
+		width: 80%;
+	}
+
+</style>
