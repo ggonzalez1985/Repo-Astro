@@ -101,15 +101,22 @@ const projects = (await getCollection('work'))
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Experiencia y Educación</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						En esta sección, detallo mi experiencia laboral y la formación en cursos que he completado para mi desarrollo profesional.
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							['Desarrollador .NET - Laharrague Chodorge sept. 2022 - mar. 2024', 
+							'Implementador WMS - Mercosur Distrib. ago. 2015 - ago. 2018', 
+							'Implementador ERP - Roble Sistemas SRL jun. 2013 - ago. 2015', 
+							'Curso Bases de Datos [Nivel Universidad] ago. 2024 - sep. 2024', 
+							<>
+								Curso C# Nivel 3<br/>
+								[Web .Net] jun. 2024 - ago. 2024
+							</>, 
+							'Curso C# Nivel 2 [.Net + SQL] may. 2024 - jun. 2024'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
@@ -203,7 +210,7 @@ const projects = (await getCollection('work'))
 	.section-header {
 		justify-self: left;
 		text-align: left;
-		max-width: 50ch;
+		max-width: 100ch;
 		font-size: var(--text-md);
 		color: var(--gray-300);
 	}
