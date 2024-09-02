@@ -91,16 +91,16 @@ tags:
 
  Permite a los usuarios gestionar y organizar sus artículos de manera eficiente a través de las siguientes funcionalidades clave:
 
-- **Listado de Artículos**: Visualiza todos los artículos disponibles en una interfaz amigable y organizada.
+- **Listado de Artículos**: Visualiza todos los artículos disponibles en una interfaz amigable y organizada.<br><br>
 
-- **Búsqueda Avanzada**: Encuentra rápidamente artículos utilizando criterios como nombre, categoría o código.
+- **Búsqueda Avanzada**: Encuentra rápidamente artículos utilizando criterios como nombre, categoría o código.<br><br>
 
-- **Agregar Artículos**: Añade nuevos artículos al catálogo, incluyendo detalles como nombre, descripción, precio, y más.
+- **Agregar Artículos**: Añade nuevos artículos al catálogo, incluyendo detalles como nombre, descripción, precio, y más.<br><br>
 
-- **Modificación de Artículos**: Edita y actualiza la información de los artículos existentes de manera sencilla.
+- **Modificación de Artículos**: Edita y actualiza la información de los artículos existentes de manera sencilla.<br><br>
 
-- **Eliminación de Artículos**: Gestiona la eliminación de artículos del sistema de forma segura y controlada.
+- **Eliminación de Artículos**: Gestiona la eliminación de artículos del sistema de forma segura y controlada.<br><br>
 
-- **Detalles de Artículos**: Accede a información detallada de cada artículo, incluyendo imágenes y especificaciones.
+- **Detalles de Artículos**: Accede a información detallada de cada artículo, incluyendo imágenes y especificaciones.<br><br>
 
 

@@ -80,7 +80,7 @@ tags:
     }
 </style>
 
-### Aplicación de escritorio para la gestión de un catalogo de artículos.
+### Aplicación Escritorio con .NET Framework WinForms.
 
 
 Permite a los usuarios gestionar y organizar sus artículos de manera eficiente con las siguientes funcionalidades clave:
