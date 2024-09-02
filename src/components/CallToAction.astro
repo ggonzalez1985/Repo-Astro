@@ -6,7 +6,24 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<a href={href}><slot /></a>
+<a href={href} onclick="handleClick(event)">
+	<slot />
+</a>
+
+<script>
+	function handleClick(event) {
+		event.preventDefault(); // Previene la acción predeterminada del enlace
+
+		const email = 'gabrielgonzalez1985@gmail.com';
+		navigator.clipboard.writeText(email).then(() => {
+			alert('Correo electrónico copiado al portapapeles');
+			// Redirige al cliente de correo después de copiar el email
+			window.location.href = 'mailto:' + email;
+		}).catch(err => {
+			console.error('Error al copiar el correo electrónico: ', err);
+		});
+	}
+</script>
 
 <style>
 	a {

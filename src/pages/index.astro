@@ -30,7 +30,7 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Holaaa...! Soy Gabriel...👋🏻"
+					title="Hola...! Soy Gabriel...👋🏻"
 					tagline="🎓Licenciado en Sistemas de Información💻Desarrollador .NET con experiencia en ASP.NET WebForms y SQL Server"
 					align="start"
 				>
@@ -108,15 +108,39 @@ const projects = (await getCollection('work'))
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Desarrollador .NET - Laharrague Chodorge sept. 2022 - mar. 2024', 
-							'Implementador WMS - Mercosur Distrib. ago. 2015 - ago. 2018', 
-							'Implementador ERP - Roble Sistemas SRL jun. 2013 - ago. 2015', 
-							'Curso Bases de Datos [Nivel Universidad] ago. 2024 - sep. 2024', 
+							[<>
+								<strong>Desarrollador .NET</strong> <br/>
+								Laharrague Chodorge <br/>
+								sept. 2022 - mar. 2024
+							</>
+							, 
 							<>
-								Curso C# Nivel 3 [Web .Net] <br/>
+								<strong>Implementador WMS</strong> <br/>
+								Mercosur Distribuciones <br/>
+								ago. 2015 - ago. 2018
+							</>
+							, 
+							<>
+								<strong>Implementador ERP</strong> <br/>
+								Roble Sistemas SRL <br/>
+								jun. 2013 - ago. 2015
+							</>
+							, 
+							<>
+								<strong>Curso Bases de Datos</strong><br/>
+								[Nivel Universidad] <br/>
+								ago. 2024 - sep. 2024
+							</>, 
+							<>
+								<strong>Curso C# Nivel 3 </strong><br/>
+								[Web .Net] <br/>
 								jun. 2024 - ago. 2024
 							</>, 
-							'Curso C# Nivel 2 [.Net + SQL] may. 2024 - jun. 2024'].map((brand) => (
+							<>
+								<strong>Curso C# Nivel 2 </strong><br/>
+								[.Net + SQL] <br/>
+								may. 2024 - jun. 2024
+							</>].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>

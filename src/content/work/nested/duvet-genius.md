@@ -1,22 +1,98 @@
 ---
+
 title: Aplicación Web con ASP.NET WebForms
 publishDate: 2020-03-04 00:00:00
 img: /assets/Default.jpg
 img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
 description: |
-  We developed a virtual showcase for the softest bedding imaginable.
+  Aplicación web interactiva para la gestión de artículos y datos.
 tags:
-  - Design
-  - Dev
-  - Branding
+  - ASP.NET
+  - SQL
+  - HTML
+  - CSS
+  - JS
+  - GitHub
+  - Bootstrap
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+<div class="tag-container">
+    <a class="tag" href="https://github.com/ggonzalez1985/" target="_blank">
+    <i class="fab fa-github" style="margin-right: 5px;"></i> GitHub
+</a>
+    <a class="tag" href="https://www.youtube.com/watch?v=O-NJLU6kEts" target="_blank">YouTube</a>
+    <a class="tag" href="http://catalogo-web.somee.com/" target="_blank">Deploy</a>
+</div>
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida. In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra posuere purus ac imperdiet. Nulla facilisi.
+<style>
+    .tag-container {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+    .tag {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+        border-radius: 999rem;
+        font-size: var(--text-md);
+        font-weight: bold;
+        line-height: 1.35;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit, efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex, lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    /* Estilos para modo claro */
+    @media (prefers-color-scheme: light) {
+        .tag {
+            color: #333; /* Texto oscuro */
+            background-color: #f0f0f0; /* Fondo claro */
+            border: 2px solid #ddd; /* Borde claro */
+        }
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+        .tag:hover {
+            background-color: #e0e0e0; /* Fondo un poco más oscuro al pasar el mouse */
+            transform: scale(1.05);
+        }
+
+        .tag:active {
+            background-color: #ccc; /* Fondo más oscuro al hacer clic */
+        }
+    }
+
+    /* Estilos para modo oscuro */
+    @media (prefers-color-scheme: dark) {
+        .tag {
+            color: #f0f0f0; /* Texto claro */
+            background-color: #333; /* Fondo oscuro */
+            border: 2px solid #444; /* Borde oscuro */
+        }
+
+        .tag:hover {
+            background-color: #444; /* Fondo un poco más claro al pasar el mouse */
+            transform: scale(1.05);
+        }
+
+        .tag:active {
+            background-color: #555; /* Fondo más claro al hacer clic */
+        }
+    }
+</style>
+
+
+
+Gestión de Artículos en una Aplicación Web con ASP.NET WebForms
+
+Permite a los usuarios gestionar y organizar sus artículos de manera eficiente a través de las siguientes funcionalidades clave:
+
+- Listado de Artículos: Visualiza todos los artículos disponibles en una interfaz amigable y organizada.
+- Búsqueda Avanzada: Encuentra rápidamente artículos utilizando criterios como nombre, categoría o código.
+- Agregar Artículos: Añade nuevos artículos al catálogo, incluyendo detalles como nombre, descripción, precio, y más.
+- Modificación de Artículos: Edita y actualiza la información de los artículos existentes de manera sencilla.
+- Eliminación de Artículos: Gestiona la eliminación de artículos del sistema de forma segura y controlada.
+- Detalles de Artículos: Accede a información detallada de cada artículo, incluyendo imágenes y especificaciones.
+
+
