@@ -23,6 +23,7 @@ const projects = (await getCollection('work'))
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
+
 ---
 
 <BaseLayout>
@@ -46,7 +47,7 @@ const projects = (await getCollection('work'))
 									<Icon icon="LinkedIn" size="1.33em" /> LinkedIn
 								</Pill>
 							</a>
-							<a href="mailto:gabrielgonzalez1985@gmail.com" id="contactPill">
+							<a href="gabrielgonzalez1985@gmail.com" id="contactPill" >
 								<Pill>
 									<Icon icon="Contacto" size="1.33em" /> Contacto
 								</Pill>
@@ -302,30 +303,29 @@ const projects = (await getCollection('work'))
 
 <script>
 	document.getElementById('contactPill').addEventListener('click', function(event) {
-		event.preventDefault(); // Evita que se abra el cliente de correo electrónico
-	
-		// Dirección de correo electrónico que deseas copiar
+		event.preventDefault(); // Evita la acción predeterminada del enlace
+
 		const email = 'gabrielgonzalez1985@gmail.com';
-	
-		// Crear un elemento de texto temporal para copiar el correo electrónico
+
+		// Crea un elemento de texto temporal
 		const textArea = document.createElement('textarea');
 		textArea.value = email;
 		document.body.appendChild(textArea);
-	
-		// Seleccionar el contenido del área de texto
 		textArea.select();
-		textArea.setSelectionRange(0, 99999); // Para móviles
-	
-		// Copiar el contenido al portapapeles
-		document.execCommand('copy');
-	
-		// Eliminar el área de texto temporal
+
+		try {
+			// Intenta copiar el texto al portapapeles
+			document.execCommand('copy');
+			alert('Correo copiado al portapapeles: ' + email);
+		} catch (err) {
+			alert('No se pudo copiar el correo al portapapeles');
+		}
+
+		// Elimina el elemento temporal
 		document.body.removeChild(textArea);
-	
-		// Opcional: Notificar al usuario que el correo se ha copiado
-		alert('Correo electrónico copiado al portapapeles!');
 	});
-	</script>
+</script>
+
 	
 	<style>	
 		#downloadPill {
